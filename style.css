@@ -1,0 +1,69 @@
+/*Create an HTML file and a CSS file. Make the background color of the body red when the width of the viewport is smaller than 480px, green when the viewport width is bigger than (or equal to) 480px and smaller than 1024px, and blue when the viewport is bigger than (or equal to) 1024px.*/
+body {
+    background-color: #77B0AA; 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#small {
+    /* display:block; */
+    font-size:12px;
+}
+
+#medium {
+    /* display:none; */
+}
+
+#large {
+    /* display:none; */
+}
+
+@media screen and (min-width:480px) {
+    body {
+        background-color: #003C43;
+        display:flex;
+        flex-direction: row;
+        flex-wrap:wrap;
+    }
+
+    #small {
+        /* display:none; */
+        width:66%;
+    }
+
+    #medium {
+        /* display:block; */
+        font-size:16px;
+        width:33%;
+    }
+    
+    #large {
+        /* display:none; */
+        width:100%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    body {
+        background-color: #135D66;
+        flex-direction: row;
+        flex-wrap:nowrap;
+    }
+
+    #small {
+        /* display:none; */
+        width:33%;
+    }
+    
+    #medium {
+        /* display:none; */
+        width:34%;
+    }
+
+    #large {
+        /* display:block; */
+        font-size:24px;
+        width:33%;
+    }
+}
